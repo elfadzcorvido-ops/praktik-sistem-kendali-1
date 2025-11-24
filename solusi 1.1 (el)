@@ -1,0 +1,25 @@
+>> % masukan polynomial sebagai vektor baris
+>> p = [ 1 -2 1 ]
+
+p =
+
+     1    -2     1
+
+>> r = rotts (p)
+Unrecognized function or variable 'rotts'.
+ 
+Did you mean:
+>> r = roots (p)
+
+r =
+
+     1
+     1
+
+>> pvalue = polyval (p,1)
+
+pvalue =
+
+     0
+
+>> 
