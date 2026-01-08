@@ -1,0 +1,98 @@
+>> num = 100
+
+num =
+
+   100
+
+>> den = [1 20 10 7 100]
+
+den =
+
+     1    20    10     7   100
+
+>> G = tf(num, den)
+
+
+G =
+ 
+                 100
+  ---------------------------------
+  s^4 + 20 s^3 + 10 s^2 + 7 s + 100
+ 
+Continuous-time transfer function.
+Model Properties
+>> [Acc, Bcc, Ccc, Dcc] = tf2ss(num, den)
+
+
+Acc =
+
+   -20   -10    -7  -100
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+
+
+Bcc =
+
+     1
+     0
+     0
+     0
+
+
+Ccc =
+
+     0     0     0   100
+
+
+Dcc =
+
+     0
+
+>> Af = flipud(Acc)
+
+Af =
+
+     0     0     1     0
+     0     1     0     0
+     1     0     0     0
+   -20   -10    -7  -100
+
+>> A  = fliplr(Af)
+
+A =
+
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+  -100    -7   -10   -20
+
+>> B  = flipud(Bcc)
+
+B =
+
+     0
+     0
+     0
+     1
+
+>> C  = fliplr(Ccc)
+
+C =
+
+   100     0     0     0
+
+>> C  = fliplr(Ccc)
+
+C =
+
+   100     0     0     0
+
+>> D  = Dcc
+
+D =
+
+     0
+
+>> 
+>> 
